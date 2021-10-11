@@ -40,7 +40,8 @@ print("Hello, My name is " + sanchyro.fullName + " and I am " + sanchyro.calcula
 
 ### Github Statistics
 
-<img align="center" alt="Sanchyro's Github Stats" src="https://github-readme-stats.vercel.app/api?username=sanchyro">
+[<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sanchyro&layout=compact&line_height=30&v=5" alt="Sanchyro's Stats" />][website]
+[<img align="center" alt="Sanchyro's Github Stats" src="https://github-readme-stats.vercel.app/api?username=sanchyro&custom_title=My Github Stats&show_icons=true&line_height=20.5&v=5&count_private=true" />][website]
 
 [website]: https://sanchyro.nl
 [linkedin]: https://linkedin.com/in/sanchyro-eijkemans
