@@ -14,19 +14,19 @@ class Sanchyro:
         self.fullName = "Sanchyro Eijkemans"  
         self.birth = (28, 6, 2002)      
 
-        self.languages = ["JS, PHP, SQL, Python, Java"]
-        self.hobbies = ["Gaming, Coding, Learning"]
+        self.languages = ["JS", "PHP", "SQL", "Python", "Java", "C#", "Swift"]
+        self.hobbies = ["Gaming", "Coding", "Learning"]
 
     def calculate_age(self):
-        birth = self.birth()
+        day, month, year = self.birth
         today = date.today()
-        return today.year - birth[2] ((today.month, today.day) < (birth[1], birth[0]))
+        return today.year - year - ((today.month, today.day) < (month, day))
 
 # Initialize 
 sanchyro = Sanchyro()
 
-print("Hello, My name is " + sanchyro.fullName + " and I am " + sanchyro.calculate_age + " years old.\n" +
-    "I've build experience in " + sanchyro.languages.count + " programming languages, and I'm still learning every day!")
+print("Hello, My name is " + sanchyro.fullName + " and I am " + str(sanchyro.calculate_age()) + " years old.\n" +
+    "I've build experience in " + str(len(sanchyro.languages)) + " programming languages, and I'm still learning every day!")
 ```
 
 ### Connect with me:
