@@ -31,8 +31,8 @@ print("Hello, My name is " + sanchyro.fullName + " and I am " + str(sanchyro.cal
 
 ### Connect with me:
 
-[<img align="left" alt="Sanchyro.nl" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
-[<img align="left" alt="Sanchyro Eijkemans | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+[<img align="left" alt="Sanchyro.nl" width="22px" background="#fff" src="https://user-images.githubusercontent.com/25529754/136913100-ead43e4a-2341-4483-a069-6c83abe84ad0.png" />][website]
+[<img align="left" alt="Sanchyro Eijkemans | LinkedIn" width="22px" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-256.png" />][linkedin]
 
 <br />
 
