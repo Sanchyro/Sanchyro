@@ -1,0 +1,151 @@
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url("/fonts/Roboto-Bold.ttf");
+}
+
+// Variables used in the CSS
+$largeText: #4B4B4B;
+$smallText: #686868;
+$branding: #0090B5;
+
+$breakpoint-tablet: 800px;
+$breakpoint-phone: 420px;
+
+*{
+    margin:0;   // Remove default whitespaces
+    padding: 0; // Remove default whitespaces
+
+    text-decoration: none;  // Remove the default text decoration
+    font-family: "Roboto-Regular", sans-serif;  // Set default font
+    color: $smallText;     // Set font color
+    letter-spacing: .3rem;    // Add letter spacing to the text
+}
+
+body{ 
+    background: #E8E8E8;    // Set background to gray
+    overflow: hidden;   // Say bye to the scrollbars
+
+    main {
+        width: 100vw;   // Set the main to the full screen
+        height: 100vh;  // Set the main to the full screen
+        display: flex;  // Set the main to flex to make the items stand next to eachother   
+
+        * {     // Make all items in the page center themselves
+            display: flex;  // Set them to flex for easy positioning
+            flex-direction: column;     // Set the flex direction to top to bottom
+            justify-content: center;    // Set the items to center in height
+            align-items: center;    // Set the items to center in width
+        }
+
+        aside{ 
+            background: #fff;   // Set the background to white
+            width: 5rem;     // Set the width of the navigation
+
+            * {     // Make all items in the sidebar center themselves
+                width: 100%;    // Make them max width
+            }
+    
+            .branding svg{
+                width: 3.5rem;  // Set the logo size
+                padding: .5rem;  // Give the logo padding on all sides
+            }
+
+            .nav{
+                height: 100vh; // Take maximum space
+                * {
+                    width: 2.2rem;      // Change the icon sizes
+                    padding: .2rem;     // Add some spacing
+                }
+            }
+
+            .social {
+                width: 1.8rem;      // Change the icon sizes
+                padding: .15rem     // Add some spacing
+            }
+
+            @media (max-width: $breakpoint-phone){
+                position: absolute;
+                width: 100vw;
+                height: 3rem;
+                bottom: 0;
+
+                flex-direction: row;
+                justify-content: space-between;
+
+                .branding{
+                    display: none;
+                }
+
+                * {
+                    flex-direction: row;
+                }
+            }
+        }
+    
+        .cta{
+            width: 35%;     // Set the width of the div
+            min-width: 200px;
+            padding-left: 5rem;  // Add padding on the left for extra spacing
+            align-items: flex-start;    // Flex start to place the items left
+            font-size: 1.3rem;  // Set font size 
+
+            h1{
+                font-family: 'Roboto-Bold', sans-serif; // Use roboto bold
+                font-weight: bold;  // In case its sans-serif, use bold sans-serif
+                color: $largeText;  // Color of the text
+                letter-spacing: .2rem;  // Letter spacing makes the text look cleaner
+            }
+
+            p{
+                font-size: 1rem;    // Set the font size
+            }
+
+            a{  
+                margin-top: 2rem;   // Add space on top
+                border: .2rem solid $branding;  // Add a border
+                padding: .4rem 1.2rem;  // Add some padding to make it look like a button
+                color: $branding;   // Set the text to the branding color
+                border-radius: .4rem;   // Add rounded borders
+                box-shadow: .1rem .2rem .2rem rgba(0,0,0,.1);   // Add a shadow to make it less plain
+
+                &:hover{    // On hover effect
+                    background: $branding;  // Set the background to the brand color
+                    color: #fff;    // Set the text back to white
+                    transition: color 0.5s; // Make the color fade a transition
+                }
+            }
+
+            @media (max-width: $breakpoint-tablet){
+                width: 100%;
+                font-size: 1rem;
+                letter-spacing: .7rem;
+            }
+
+            @media (max-width: $breakpoint-phone){
+                align-items: center;
+                padding:1rem;
+                align-self: flex-end;
+                margin-bottom: 30%;
+            }
+        }
+
+        .filler {
+            width: 65%;     // Make the filler 60% of the width
+            align-items: flex-end;      // Place the filler on the right side of the screen
+            margin-right: -5% !important;
+
+            @media (max-width: $breakpoint-tablet){
+                position: absolute;
+                width: 100%;
+                height: 30%;
+                align-items: center;
+                margin:0;
+            }
+        }
+    }
+}

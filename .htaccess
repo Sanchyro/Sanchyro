@@ -1,0 +1,41 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+#Always use HTTPS
+#RewriteCond %{HTTP_HOST} ^www\.sanchyro\.nl$
+#RewriteRule ^/?$ "http\:\/\/sanchyro\.nl\/" [R=301,L]
+
+#RewriteCond %{HTTPS} !=on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+
+RewriteBase /
+## hide .html extension snippet
+
+# To externally redirect /dir/file.html to /dir/file
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+RewriteRule ^ %1/ [R,L]
+
+# add a trailing slash
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule . %{REQUEST_URI}/ [L,R=301]
+
+# To internally forward /dir/file to /dir/file.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*?)/?$ $1.html [L]
+
+
+#Redirect on 404
+ErrorDocument 404 /404/
+
+# One year caching for image and font files
+<filesMatch ".(jpg|jpeg|png|gif|ico|ttf)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+
+# Seven days cashing for html, css and js
+<filesMatch ".(html|css|js)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>
