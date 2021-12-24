@@ -14,7 +14,7 @@ class Sanchyro:
         self.fullName = "Sanchyro Eijkemans"  
         self.birth = (28, 6, 2002)      
 
-        self.languages = ["HTML", "CSS", "JS", "PHP", "SQL", "Python", "Java", "C#", "Swift"]
+        self.languages = ["HTML", "CSS", "JS", "PHP", "SQL", "Python", "Java", "C#", "Swift", "Dart"]
         self.hobbies = ["Gaming", "Coding", "Learning"]
 
     def calculate_age(self):
