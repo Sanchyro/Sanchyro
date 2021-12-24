@@ -25,8 +25,8 @@ class Sanchyro:
 # Initialize 
 sanchyro = Sanchyro()
 
-print("Hello, My name is " + sanchyro.fullName + " and I am " + str(sanchyro.calculate_age()) + " years old.\n" +
-    "I've build experience in " + str(len(sanchyro.languages)) + " programming languages, and I'm still learning every day!")
+print(f"Hello, My name is {sanchyro.fullName} and I am {str(sanchyro.calculate_age())} years old.\n" +
+    "I've build experience in {str(len(sanchyro.languages))} programming languages, and I'm still learning every day!")
 ```
 
 ### Connect with me:
